@@ -1,6 +1,11 @@
 <div class='app-wrapper'>
-  <app-header></app-header>
-  <app-main-content></app-main-content>
-  <app-footer></app-footer>
-  <app-cart></app-cart>
+  <header>
+    <app-header></app-header>
+  </header>
+  <app-main-content [user]='user'></app-main-content>
+  <footer>
+    <app-footer></app-footer>
+  </footer>
 </div>
+
+<h1>{{selectedUser.name}}</h1>
