@@ -1,0 +1,7 @@
+<ul>
+  <li *ngFor='let user of users'>
+      <app-test-child [user]='user' (userSelected)='selectedUser = user'></app-test-child>
+  </li>
+</ul>
+
+<h1 (click)='addUsers()'>{{selectedUser?.name}}</h1>

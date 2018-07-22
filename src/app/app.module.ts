@@ -8,6 +8,8 @@ import { FooterComponent } from './footer/footer.component';
 import { CartComponent } from './cart/cart.component';
 
 import {MatCardModule} from '@angular/material/card';
+import { TestParentComponent } from './test-parent/test-parent.component';
+import { TestChildComponent } from './test-parent/test-child/test-child.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +17,9 @@ import {MatCardModule} from '@angular/material/card';
     HeaderComponent,
     MainContentComponent,
     FooterComponent,
-    CartComponent
+    CartComponent,
+    TestParentComponent,
+    TestChildComponent
   ],
   imports: [
     BrowserModule,
