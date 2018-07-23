@@ -12,5 +12,5 @@
     <button (click)="toggle()">Корзина</button>
   </div>
 <p *ngIf="!condition">
-  <app-cart *ngFor='let item of productCart' [item]='item'></app-cart>
+  <app-cart *ngFor='let item of productCart' [item]='item' (poductDelete)='productDelete($event)'></app-cart>
 </p>

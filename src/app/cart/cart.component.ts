@@ -1,4 +1,5 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { THIS_EXPR } from '@angular/compiler/src/output/output_ast';
 
 @Component({
   selector: 'app-cart',
@@ -8,4 +9,10 @@ import { Component, Input } from '@angular/core';
 export class CartComponent {
 
   @Input() item;
+  @Output() productDelete: EventEmitter<any> = new EventEmitter();
+
+  deleteProduct(item: Product) {
+    this.productDelete.emit(item);
+    // console.log(item);
+  }
 }

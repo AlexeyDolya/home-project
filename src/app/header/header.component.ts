@@ -13,4 +13,10 @@ export class HeaderComponent {
   toggle() {
     this.condition = !this.condition;
   }
+
+  productDelete(event: any) {
+    console.log(event);
+    this.productCart.splice(event, 1);
+    console.log(this.productCart);
+  }
 }
