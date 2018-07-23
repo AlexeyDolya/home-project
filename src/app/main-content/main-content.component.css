@@ -1,14 +1,15 @@
-.content-wrapper {
+/* .content-wrapper {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
 }
 .product-card {
-  width: 296px;
-  height: 450px;
+  width: 200px;
+  height: 300px;
+  margin-top: 300px;
 }
 
 .wallpaper-photo {
-  width: 288px;
-  height: 252px;
-}
+  width: 30px;
+  height: 30px;
+} */

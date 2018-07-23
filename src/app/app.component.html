@@ -1,11 +1,9 @@
 <div class='app-wrapper'>
   <header>
-    <app-header></app-header>
+    <app-header [productCart]='productCart'></app-header>
   </header>
-  <app-main-content></app-main-content>
+  <app-main-content [products]='products' (pushToCart)='pushToCart($event)'></app-main-content>
   <footer>
     <app-footer></app-footer>
   </footer>
 </div>
-
-<app-test-parent></app-test-parent>

@@ -1,19 +1,15 @@
-<div class='content-wrapper'>
-  <mat-card class="product-card" *ngFor='let i of wallpapers'>
+  <div class="product-card" *ngFor='let item of products'>
     <div class='wallpaper-photo'>
-      <img mat-card-image src="{{i.image}}" alt="Wheel photo">
+      <!-- <img mat-card-image src="{{i.image}}" alt="Wheel photo"> -->
     </div>
-    <div>{{i.name}}</div>
-    <div><p>Артиул:</p>{{i.articul}}</div>
-    <div><p>Бренд:</p>{{i.brand}}</div>
-    <div><p>Цена:</p>{{i.price}}</div>
+    <div>{{item.name}}</div>
+    <div><p>Артиул:</p>{{item.articul}}</div>
+    <div><p>Бренд:</p>{{item.brand}}</div>
+    <div><p>Цена:</p>{{item.price}}</div>
     <div class='order-btn-wrapper'>
-      <button (click)='selectProduct()' class='order-btn'>Заказать</button>
+      <button (click)='addToCart(item)' class='order-btn'>Заказать</button>
     </div>
-  </mat-card>
-</div>
-
-<h1>main-content works!</h1>
+  </div>
 
 <!-- <div class='content-wrapper'>
   <div class='product-card' *ngFor='let wallpaper form wallpapers'>
