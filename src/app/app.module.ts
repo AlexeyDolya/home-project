@@ -2,10 +2,10 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './header/header.component';
-import { MainContentComponent } from './main-content/main-content.component';
-import { FooterComponent } from './footer/footer.component';
-import { CartComponent } from './cart/cart.component';
+import { HeaderComponent } from './components/header/header.component';
+import { MainContentComponent } from './components/main-content/main-content.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { CartComponent } from './components/cart/cart.component';
 
 import {MatCardModule} from '@angular/material/card';
 
