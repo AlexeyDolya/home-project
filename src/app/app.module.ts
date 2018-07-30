@@ -7,7 +7,7 @@ import { MainContentComponent } from './components/main-content/main-content.com
 import { FooterComponent } from './components/footer/footer.component';
 import { CartComponent } from './components/cart/cart.component';
 
-import {MatCardModule} from '@angular/material/card';
+import { SearchProducts } from './search.pipe';
 
 @NgModule({
   declarations: [
@@ -16,10 +16,10 @@ import {MatCardModule} from '@angular/material/card';
     MainContentComponent,
     FooterComponent,
     CartComponent,
+    SearchProducts,
   ],
   imports: [
     BrowserModule,
-    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]

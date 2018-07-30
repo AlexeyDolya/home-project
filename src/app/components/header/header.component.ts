@@ -6,7 +6,22 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent {
-  @Input() productCart;
+  @Input()
+  productCart;
+  @Input()
+  products;
+  public open = false;
+  public a: string;
+  public category: string;
+  public openCategory = false;
+  public filteredCategory;
+
+  public categorySearch = [
+    { name: 'По умолчанию', product: 'all' },
+    { name: 'Названию', product: 'name' },
+    { name: 'Артикулу', product: 'articul' },
+    { name: 'Бренду', product: 'brand' },
+  ];
 
   condition = true;
 
@@ -14,9 +29,18 @@ export class HeaderComponent {
     this.condition = !this.condition;
   }
 
-  productDelete(event: any) {
-    console.log(event);
+  deleteFromCart(event: any) {
     this.productCart.splice(event, 1);
-    console.log(this.productCart);
   }
+
+  categorySelect(target) {
+    this.category = target.innerHTML;
+    this.filteredCategory = this.categorySearch.filter(product => product.name === this.category);
+    this.filteredCategory = this.filteredCategory[0].product;
+  }
+
+  openCategorySearch() {
+    this.openCategory = !this.openCategory;
+  }
+
 }
